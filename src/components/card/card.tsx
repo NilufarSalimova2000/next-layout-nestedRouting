@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Type {
     img: string;
   title: string;
@@ -16,7 +18,7 @@ export const Card = ({ item }: { item: Type }) => {
             padding: "16px",
             width: "250px"
           }}>
-            <img src={item.img} alt={item.title} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+            <Image src={item.img} alt={item.title} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
             <h3>{item.title}</h3>
             <p><strong>RAM/Storage:</strong> {item.rame}</p>
             <p><strong>Color:</strong> {item.color}</p>
